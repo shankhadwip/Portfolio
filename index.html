@@ -27,6 +27,7 @@
   --gold-dim:  #1C1508;
   --r:         10px;
   --ease:      cubic-bezier(.4,0,.2,1);
+  --nav-h: 58px; 
 }
 
 /* ─────────────────────────────────────────────
@@ -59,7 +60,7 @@ ul { list-style: none; }
   margin-inline: auto;
 }
 .sec-wrap {
-  padding-block: clamp(5rem, 9vw, 8rem);
+  padding-block: clamp(3rem, 5vw, 5rem);
 }
 .sec-wrap + .sec-wrap {
   border-top: 1px solid var(--border);
@@ -140,9 +141,9 @@ nav {
    HERO
 ───────────────────────────────────────────── */
 .hero-outer {
-  padding-block-start: 58px;
-  min-height: 100svh;
-  display: flex; align-items: center;
+   padding-block-start: var(--nav-h);
+  display: flex;
+  align-items: center;
 }
 .hero {
   width: min(1000px, 100% - 2.5rem);
@@ -151,7 +152,7 @@ nav {
   grid-template-columns: 1fr 300px;
   align-items: center;
   gap: 4.5rem;
-  padding-block: 5rem 4.5rem;
+  padding-block: clamp(3rem, 4vw, 5rem);
 }
 
 .hero-eyebrow {
@@ -217,9 +218,9 @@ nav {
 .btn-line:hover { border-color: var(--gold); color: var(--text); transform: translateY(-1px); text-decoration: none; }
 
 .hero-stats {
-  display: flex; gap: 2.5rem;
-  margin-top: 3rem; padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  display: flex; gap: 3rem;
+  margin-top: 2.5rem; padding-top: 2rem; /
+  border-top: 1px solid var(--border); /* separates stats from bio */
 }
 .stat-val {
   font-family: 'Fraunces', serif;
@@ -245,7 +246,7 @@ nav {
   ════════════════════════════════════════════════
 */
 .hero-photo {
-  width: 100%; aspect-ratio: 3/4;
+  width: 100%; aspect-ratio: 4/5;
   border-radius: 16px;
   border: 1px solid var(--border);
   overflow: hidden; position: relative;
@@ -587,7 +588,13 @@ footer {
 ───────────────────────────────────────────── */
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-photo { display: none; }
+  .hero-photo {
+  display: block;
+  max-width: 260px;
+  margin: 0 auto;
+  order: -1;        /* puts image on top */
+  margin-bottom: 1rem;
+}
   .skills-layout { grid-template-columns: 1fr 1fr; }
   .skill-block.featured { grid-column: span 2; }
   .exp-item { grid-template-columns: 1fr; gap: .4rem; }
@@ -661,7 +668,7 @@ footer {
       </h1>
 
       <p class="hero-title">
-        <strong>QA & Automation Engineer</strong> — building confidence in software
+        <strong>QA & Automation Engineer · Web Dev Enthusiast </strong> — building confidence in software
         through structured testing, smart automation, and a genuine enthusiasm for
         how the web is built.
       </p>
@@ -968,7 +975,7 @@ footer {
   <div class="wrap">
     <div class="footer-inner">
       <span class="footer-name">Shankha Dwip Talukdar</span>
-      <span class="footer-copy">© 2025 — He / Him — Shillong, India</span>
+      <span class="footer-copy">© 2025 — He / Him - Guwahati, India</span>
     </div>
   </div>
 </footer>
