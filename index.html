@@ -170,7 +170,7 @@ nav {
 
 .hero-name {
   font-family: 'Fraunces', serif;
-  font-size: clamp(2.8rem, 7.5vw, 5.8rem);
+  font-size: clamp(2.5rem, 5vw, 5.8rem);
   font-weight: 400; line-height: 1.04;
   letter-spacing: -.01em; color: var(--text);
 }
@@ -590,7 +590,8 @@ footer {
   .hero { grid-template-columns: 1fr; gap: 3rem; }
   .hero-photo {
   display: block;
-  max-width: 260px;
+  max-width: 200px;
+  max-height: 240px;
   margin: 0 auto;
   order: -1;        /* puts image on top */
   margin-bottom: 1rem;
@@ -842,11 +843,10 @@ footer {
   <div class="proj-grid">
     <div class="proj-card r d1">
       <p class="proj-num">01</p>
-      <p class="proj-title">MyWatchlistX</p>
+      <a href="https://mywatchlistx.netlify.app/" target="_blank" class="proj-title">MyWatchlistX ↗</a>
       <p class="proj-desc">
-        A dynamic movie & series watchlist app — search, track, and manage your
-        watch history with a clean, responsive interface. Built as a live project
-        during my time at Pursuit Software.
+      A movie & series watchlist app with real-time search via TMDB API, built with React and Tailwind CSS. Deployed live
+        <a href="https://mywatchlistx.netlify.app/" target="_blank" style="color: var(--gold); text-decoration: none;">View live project ↗</a>
       </p>
       <div class="proj-stack">
         <span class="proj-tag">React</span>
